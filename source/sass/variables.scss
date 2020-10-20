@@ -1,8 +1,29 @@
+
+$black: #000000;
+$white: #ffffff;
+$very-dark-gray: #0e0e0e;
+$light-grayish-blue: #f6f7f9;
+$very-dark-blue: #131314;
+$vivid-cyan: #0ad9c6;
+$very-light-gray: #f6f6f6;
+$graphite-black: #1c1c1c;
+$grayish-blue: #c9ccd4;
+
 $main-font: "Open Sans", "Arial", sans-serif;
 
-$color-black: #000000;
+$color-black: $black;
+$color-white: $white;
+$color-input: $graphite-black;
+$color-very-dark-gray: $very-dark-gray;
 
-$bg-blue: #f6f7f9;
-$bg-black: #131314;
-$bg-turquoise: #0ad9c6;
-$bg-lightgrey: #f6f6f6;
+$bg-light-grayish-blue: $light-grayish-blue;
+$bg-very-dark-blue: $very-dark-blue;
+$bg-vivid-cyan: $vivid-cyan;
+$bg-very-light-gray: $very-light-gray;
+$bg-input: $white;
+
+$border-input: 1px solid $grayish-blue;
+
+$desktop-width: 1024px;
+$tablet-width: 1023px;
+$mobile-width: 767px;

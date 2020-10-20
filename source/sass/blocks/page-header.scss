@@ -1,0 +1,39 @@
+.page-header {
+  position: relative;
+
+  background-color: #0e0e0e;
+  background-image: url("../img/index-background-desktop@1x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.page-header__inner {
+  padding-left: 72px;
+  padding-right: 72px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.page-header__wrapper {
+  min-height: 763px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: $tablet-width) {
+  .page-header {
+    background-color: $white;
+    background-image: none;
+  }
+
+  .page-header__inner {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-header__wrapper {
+    min-height: 100%;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,120 @@
+.feedback {
+  padding: 47px 0 30px;
+  width: 328px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feedback fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.feedback legend {
+  margin-bottom: 20px;
+
+  @include font-semibold;
+  @include text-size(17px, 1.65);
+  text-align: center;
+  letter-spacing: -0.005em;
+  color: $color-white;
+}
+
+.feedback__field input {
+  width: 327px;
+  padding: 13px 30px 9px;
+
+  @include font-normal;
+  @include text-size(15px, 1.6);
+  color: rgba($graphite-black, 0.5);
+  font-family: $main-font;
+
+  background-color: $bg-input;
+  border: $border-input;
+  border-radius: 6px;
+
+  margin-bottom: 20px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: rgba($vivid-cyan, 0.5);
+  }
+}
+
+.feedback__button {
+  padding: 16px 44px 14px 48px;
+  width: 326px;
+
+  @include font-semibold;
+  @include text-size(15px, 1.4);
+  text-align: center;
+  font-family: $main-font;
+
+  border: none;
+  border-radius: 6px;
+  background-color: $bg-vivid-cyan;
+
+  &:hover,
+  &:focus {
+    background-color: $grayish-blue;
+  }
+
+  &:active {
+    background-color: $grayish-blue;
+  }
+}
+
+
+@media (max-width: $tablet-width) {
+  .feedback {
+    padding-top: 70px;
+    width: 321px;
+    margin: 0 auto;
+  }
+
+  .feedback legend {
+    padding: 0;
+    margin-bottom: 30px;
+
+    @include font-semibold;
+    @include text-size(18px, 1.56);
+    text-align: center;
+    color: $color-black;
+  }
+
+  .feedback__field input {
+    padding: 11px 21px;
+    width: 321px;
+  }
+
+  .feedback__button {
+    width: 321px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .feedback {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: auto;
+    max-width: 357px;
+  }
+
+  .feedback legend {
+    margin-bottom: 20px;
+  }
+
+  .feedback__field input {
+    padding: 12px 26px 10px;
+    width: 100%;
+  }
+
+  .feedback__button {
+    padding: 15px 30px;
+    width: auto;
+  }
+}

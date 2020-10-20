@@ -1,3 +1,9 @@
-body {
-  background-color: gray;
-}
+@import "../sass/fonts.scss";
+@import "../sass/variables.scss";
+@import "../sass/mixins.scss";
+@import "../sass/scaffolding.scss";
+@import "../sass/blocks/container.scss";
+@import "../sass/blocks/page-header.scss";
+@import "../sass/blocks/main-nav.scss";
+@import "../sass/blocks/hero-header.scss";
+@import "../sass/blocks/feedback.scss";
