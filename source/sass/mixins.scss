@@ -32,10 +32,6 @@
   color: $color-title;
 }
 
-@mixin tablet-title {
-  @include text-size(24px, 1.71);
-}
-
 @mixin pseudo ($top, $left, $width, $height) {
   position: absolute;
   top: $top;

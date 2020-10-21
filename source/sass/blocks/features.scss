@@ -1,5 +1,5 @@
 .features {
-  padding: 150px 30px 100px;
+  padding: 150px 30px 90px;
   max-width: 1220px;
   margin: 0 auto;
 }
@@ -25,8 +25,9 @@
   position: relative;
 
   padding-top: 55px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   width: 22.37%;
+  margin-bottom: 40px;
 
   @include font-normal;
   @include text-size(22px, 1.55);
@@ -52,14 +53,14 @@
 
 @media (max-width: $tablet-width) {
   .features {
-    padding: 36px 13.8% 70px;
+    padding: 36px 13.8% 30px;
   }
 
   .features h2 {
     margin-left: 0;
     margin-bottom: 30px;
 
-    @include tablet-title;
+    @include text-size(24px, 1.71);
   }
 
   .features__list {
@@ -67,7 +68,8 @@
   }
 
   .features__item {
-    padding-bottom: 41px;
+    margin-bottom: 40px;
+    padding-bottom: 0;
     width: 263px;
 
     &:not(:nth-child(4n)) {
@@ -87,7 +89,6 @@
   }
 
   .features__item {
-    padding-bottom: 0;
     min-height: 125px;
     width: 100%;
 
