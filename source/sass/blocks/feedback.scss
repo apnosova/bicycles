@@ -36,17 +36,21 @@
   border: $border-input;
   border-radius: 6px;
 
-  margin-bottom: 20px;
-
   &:hover,
   &:active,
   &:focus {
-    background-color: rgba($vivid-cyan, 0.5);
+    background-color: $vivid-cyan;
+    color: $color-black;
   }
+}
+
+.feedback__field:not(:last-child) input {
+  margin-bottom: 20px;
 }
 
 .feedback__button {
   padding: 16px 44px 14px 48px;
+  margin-top: 20px;
   width: 326px;
 
   @include font-semibold;
@@ -72,6 +76,7 @@
 @media (max-width: $tablet-width) {
   .feedback {
     padding-top: 70px;
+    padding-bottom: 35px;
     width: 321px;
     margin: 0 auto;
   }

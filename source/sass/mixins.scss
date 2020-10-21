@@ -22,5 +22,32 @@
 @mixin list-reset {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
+}
+
+@mixin desktop-title {
+  @include font-semibold;
+  @include text-size(30px, 1);
+  letter-spacing: -0.005em;
+  color: $color-title;
+}
+
+@mixin tablet-title {
+  @include text-size(24px, 1.71);
+}
+
+@mixin pseudo ($top, $left, $width, $height) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+}
+
+@mixin pseudo-content ($content, $top, $left, $color) {
+  content: $content;
+  position: absolute;
+  top: $top;
+  left: $left;
+  color: $color;
 }

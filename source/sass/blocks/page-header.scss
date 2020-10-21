@@ -3,6 +3,7 @@
 
   background-color: #0e0e0e;
   background-image: url("../img/index-background-desktop@1x.jpg");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -33,7 +34,7 @@
   }
 
   .page-header__wrapper {
-    min-height: 100%;
     flex-direction: column;
+    min-height: 100%;
   }
 }

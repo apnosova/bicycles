@@ -68,19 +68,19 @@
     content: "";
 
     position: absolute;
-    top: 17px;
+    top: 18px;
     left: 13px;
 
     width: 23px;
-    height: 2px;
+    height: 1px;
 
     background-color: $black;
-    box-shadow: 0 7px 0 0 $black, 0 14px 0 0 $black;
+    box-shadow: 0 6px 0 0 $black, 0 13px 0 0 $black;
   }
 
   .main-nav--closed .main-nav__toggle:active::before {
     background-color: #d0d0d1;
-    box-shadow: 0 7px 0 0 #d0d0d1, 0 14px 0 0 #d0d0d1;
+    box-shadow: 0 6px 0 0 #d0d0d1, 0 13px 0 0 #d0d0d1;
   }
 
   .main-nav--closed .main-nav__list {
@@ -110,7 +110,7 @@
       left: 9px;
 
       width: 32px;
-      height: 2px;
+      height: 1px;
 
       background-color: #d0d0d1;
     }
@@ -135,7 +135,9 @@
     right: 0;
     z-index: 10;
 
-    min-width: 320px;
+    padding-bottom: 95px;
+    padding-top: 60px;
+    width: 320px;
     min-height: 568px;
     justify-content: center;
 
@@ -144,7 +146,7 @@
   }
 
   .main-nav--opened .main-nav__link {
-    padding: 12px 35px 20px 16px;
+    padding: 15px 60px 17px 16px;
 
     @include text-size(20px, 1.4);
     text-align: left;
@@ -152,9 +154,66 @@
     @include font-normal;
     letter-spacing: normal;
     color: #48494d;
+
+    &:active {
+      color: black;
+    }
   }
 
   .main-nav--opened .main-nav__item {
+    position: relative;
+
+    background-color: $bg-very-light-gray;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &:active {
+      background-color: $bg-vivid-cyan;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 38%;
+      right: 27px;
+
+      width: 8px;
+      height: 8px;
+
+      border-top: 2px solid rgba(#2c2e3f, 0.5);
+      border-right: 2px solid rgba(#2c2e3f, 0.5);
+      transform: rotate(45deg);
+    }
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    position: static;
+
+    padding-top: 80px;
+    min-height: 0;
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__link {
+    padding: 12px 60px 20px 16px;
+
+    @include text-size(16px, 2);
+    text-align: center;
+
+    @include font-normal;
+    letter-spacing: normal;
+    color: #48494d;
+  }
+
+
+  .main-nav--nojs .main-nav__item {
     position: relative;
 
     margin-bottom: 30px;
@@ -179,14 +238,9 @@
       border-right: 2px solid rgba(#2c2e3f, 0.5);
       transform: rotate(45deg);
     }
+  }
 
-    .main-nav--nojs .main-nav__toggle {
-      display: none;
-    }
-
-    .main-nav--nojs .main-nav {
-      position: static;
-      min-height: 0;
-    }
+  .main-nav--nojs {
+    padding: 0;
   }
 }

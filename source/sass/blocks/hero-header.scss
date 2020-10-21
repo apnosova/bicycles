@@ -7,7 +7,7 @@
 }
 
 .hero-header__logo {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .hero-header__logo-img {
@@ -16,9 +16,9 @@
   height: 20px;
 }
 
-.hero-header h2 {
+.hero-header__content h2 {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
 
   @include text-size(46px, 1.39);
   @include font-bold;
@@ -27,7 +27,7 @@
   color: $color-white;
 }
 
-.hero-header p {
+.hero-header__content p {
   margin: 0;
 
   @include text-size(20px, 1.6);
@@ -58,14 +58,14 @@
     left: 21px;
   }
 
-  .hero-header h2 {
+  .hero-header__content h2 {
     margin-bottom: 20px;
 
     @include text-size(30px, 1.4);
     text-align: center;
   }
 
-  .hero-header p {
+  .hero-header__content p {
     @include text-size(18px, 1.78);
     text-align: center;
   }
