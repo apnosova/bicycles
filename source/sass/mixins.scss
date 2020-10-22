@@ -47,3 +47,14 @@
   left: $left;
   color: $color;
 }
+
+@mixin pseudo-bike-types ($top, $left, $width, $height, $border, $border-radius) {
+  content: "";
+  position: absolute;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+  border: $border;
+  border-radius: $border-radius;
+}

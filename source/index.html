@@ -85,13 +85,80 @@
         </li>
       </ol>
     </section>
-    <div style="height: 1752px;"></div>
+    <section class="bike-types">
+      <div class="bike-types__inner">
+        <h2>Виды велосипедов</h2>
+        <ul class="bike-types__list">
+          <li class="bike-types__item bike-types__item--road">
+            <a class="bike-types__link" href="#">
+              <picture>
+                <!--
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/road-bike-desktop@1x.webp 1x, img/road-bike-desktop@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/road-bike-tablet@1x.webp 1x, img/road-bike-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/road-bike-mobile@1x.webp 1x, img/road-bike-mobile@2x.webp 2x">
+                  -->
+                <source media="(min-width: 1024px)"
+                  srcset="img/road-bike-desktop@1x.jpg 1x, img/road-bike-desktop@2x.jpg 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="img/road-bike-tablet@1x.jpg 1x, img/road-bike-tablet@2x.jpg 2x">
+                <img src="img/road-bike-mobile@1x.jpg" srcset="img/road-bike-mobile@2x.jpg 2x" alt="Дорожный велосипед"
+                  width="342" height="503">
+              </picture>
+            </a>
+            <h3>Дорожный велосипед</h3>
+          </li>
+          <li class="bike-types__item bike-types__item--mountain">
+            <a class="bike-types__link" href="#">
+              <picture>
+                <!--
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/mountain-bike-desktop@1x.webp 1x, img/mountain-bike-desktop@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/mountain-bike-tablet@1x.webp 1x, img/mountain-bike-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/road-bike-mobile@1x.webp 1x, img/road-bike-mobile@2x.webp 2x">
+                  -->
+                <source media="(min-width: 1024px)"
+                  srcset="img/mountain-bike-desktop@1x.jpg 1x, img/mountain-bike-desktop@2x.jpg 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="img/mountain-bike-tablet@1x.jpg 1x, img/mountain-bike-tablet@2x.jpg 2x">
+                <img src="img/mountain-bike-mobile@1x.jpg" srcset="img/mountain-bike-mobile@2x.jpg 2x"
+                  alt="Горный велосипед" width="342" height="566">
+              </picture>
+            </a>
+            <h3>Горный велосипед</h3>
+
+
+          </li>
+          <li class="bike-types__item bike-types__item--kids">
+            <a class="bike-types__link" href="#">
+              <picture>
+                <!--
+                <source type="image/webp" media="(min-width: 1024px)"
+                  srcset="img/kids-bike-desktop@1x.webp 1x, img/kids-bike-desktop@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/kids-bike-tablet@1x.webp 1x, img/kids-bike-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/kids-bike-mobile@1x.webp 1x, img/kids-bike-mobile@2x.webp 2x">
+                  -->
+                <source media="(min-width: 1024px)"
+                  srcset="img/kids-bike-desktop@1x.jpg 1x, img/kids-bike-desktop@2x.jpg 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="img/kids-bike-tablet@1x.jpg 1x, img/kids-bike-tablet@2x.jpg 2x">
+                <img src="img/kids-bike-mobile@1x.jpg" srcset="img/kids-bike-mobile@2x.jpg 2x" alt="Детский велосипед"
+                  width="342" height="513">
+              </picture>
+            </a>
+            <h3>Детский велосипед</h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <div style="width: 804px;"></div>
     <section class="directions">
       <h2>Как нас найти?</h2>
       <p>Мы находимся по адресу: Санкт&nbsp;-&nbsp;Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19</p>
-      <div class="directions__map">
-
-      </div>
+      <div class="directions__map" tabindex="0"></div>
     </section>
   </main>
   <footer class="page-footer">
