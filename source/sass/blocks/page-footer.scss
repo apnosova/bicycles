@@ -17,24 +17,22 @@
 
   padding-left: 37px;
 
+  &--mail {
+    &::before {
+      @include pseudo(6px, -4px, 26px, 20px);
+
+      background-image: url("../img/mailto-icon.svg");
+    }
+  }
+
   &--phone {
     padding-right: 13px;
-  }
-}
 
-.page-footer__icon {
-  position: absolute;
+    &::before {
+      @include pseudo(2px, 0, 22px, 23px);
 
-  top: 0;
-  left: 0;
-
-  &--mail {
-    top: 6px;
-    left: -4px;
-  }
-
-  &--phone {
-    top: 2px;
+      background-image: url("../img/phone-icon.svg");
+    }
   }
 }
 
@@ -42,32 +40,14 @@
   @include font-normal;
   line-height: 2;
   color: rgba(0, 0, 0, 0.5);
-}
 
-.page-footer__link:hover {
-  color: rgba($color-black, 1);
-}
+  &:hover {
+    color: rgba($color-black, 1);
+  }
 
-.page-footer__link:hover .page-footer__icon--phone path {
-  stroke: rgba(0, 0, 0, 1);
-  fill: none;
-}
-
-.page-footer__link:hover .page-footer__icon--mail path {
-  fill: rgba(0, 0, 0, 1);
-}
-
-.page-footer__link:active {
-  color: rgba($color-black, 0.8);
-}
-
-.page-footer__link:active .page-footer__icon--phone path {
-  stroke: rgba(0, 0, 0, 0.8);
-  fill: none;
-}
-
-.page-footer__link:active .page-footer__icon--mail path {
-  fill: rgba(0, 0, 0, 0.8);
+  &:active {
+    color: rgba($color-black, 0.8);
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -103,25 +83,22 @@
   .page-footer__item {
     &--mail {
       padding-left: 45px;
-    }
 
-    &:not(:last-child) {
-      margin-bottom: 20px;
+      &::before {
+        left: 5px;
+      }
     }
 
     &--phone {
       padding-right: 15px;
-    }
-  }
 
-
-  .page-footer__icon {
-    &--phone {
-      top: -2px;
+      &::before {
+        top: -2px;
+      }
     }
 
-    &--mail {
-      left: 5px;
+    &:not(:last-child) {
+      margin-bottom: 19px;
     }
   }
 }

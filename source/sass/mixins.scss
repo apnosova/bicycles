@@ -33,6 +33,7 @@
 }
 
 @mixin pseudo ($top, $left, $width, $height) {
+  content: "";
   position: absolute;
   top: $top;
   left: $left;
@@ -58,3 +59,4 @@
   border: $border;
   border-radius: $border-radius;
 }
+

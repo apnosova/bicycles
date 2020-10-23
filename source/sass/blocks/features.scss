@@ -5,9 +5,10 @@
 }
 
 .features h2 {
-  margin: 0;
+  width: 50%;
+  margin: 0 auto;
+  padding-left: 20px;
   margin-bottom: 50px;
-  margin-left: 20px;
 
   @include desktop-title;
   text-align: center;
@@ -57,8 +58,9 @@
   }
 
   .features h2 {
-    margin-left: 0;
+    padding-left: 0;
     margin-bottom: 30px;
+    width: 70%;
 
     @include text-size(24px, 1.71);
   }
@@ -82,6 +84,10 @@
   .features {
     padding-left: 4.69%;
     padding-right: 4.69%;
+  }
+
+  .features h2 {
+    width: 100%;
   }
 
   .features__list {

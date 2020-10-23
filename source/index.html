@@ -4,18 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Акселератор HTML Academy: Велосипеды</title>
+  <meta name="description"
+    content="Широкий выбор велосипедов и крутых аксессуаров в магазине в Санкт-Петербурге: продажа велосипедов и аксессуаров, профессиональные консультации, доставка по всей России">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preload" href="fonts/opensans-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensans-light.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensans-semibold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensans-bold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
-
-  <!-- Pixel Glass -->
-
-
-
-  <!-- // Pixel Glass -->
 </head>
 
 <body>
@@ -25,22 +21,22 @@
         <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">О нас</a>
+            <a class="main-nav__link" href="#features">О нас</a>
           </li>
           <li class=" main-nav__item">
-            <a class="main-nav__link" href="#">Виды велосипедов</a>
+            <a class="main-nav__link" href="#types">Виды велосипедов</a>
           </li>
           <li class=" main-nav__item">
-            <a class="main-nav__link" href="#">Видео про велосипеды</a>
+            <a class="main-nav__link" href="#video">Видео про велосипеды</a>
           </li>
           <li class=" main-nav__item">
-            <a class="main-nav__link" href="#">Контакты</a>
+            <a class="main-nav__link" href="#contacts">Контакты</a>
           </li>
         </ul>
       </nav>
       <div class="page-header__wrapper">
         <section class="hero-header">
-          <a class="hero-header__logo">
+          <a class="hero-header__logo" href="index.html">
             <img class="hero-header__logo-img" src="img/logo.svg" alt="Логотип компании Moon" width="70" height="20">
           </a>
           <div class="hero-header__content">
@@ -52,11 +48,13 @@
           <fieldset>
             <legend>Заполните поля ниже и мы подберем велосипед Вашей мечты</legend>
             <div class="feedback__field">
-              <input type="text" name="name" placeholder="Введите Ваше Имя" required>
+              <label for="user-name" class="visually-hidden">Введите ваше имя</label>
+              <input type="text" id="user-name" name="name" placeholder="Введите Ваше Имя" required>
             </div>
             <div class="feedback__field">
-              <input type="tel" name="phone" placeholder="Введите Ваш номер телефона" pattern="2[0-9]{3}-[0-9]{3}"
-                required>
+              <label for="user-phone" class="visually-hidden">Введите ваш номер телефона</label>
+              <input type="tel" id="user-phone" name="phone" placeholder="Введите Ваш номер телефона"
+                pattern="2[0-9]{3}-[0-9]{3}" required>
             </div>
           </fieldset>
           <button class="feedback__button" type="submit">
@@ -68,7 +66,7 @@
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">Moon - магазин по продаже велосипедов</h1>
-    <section class="features">
+    <section class="features" id="features">
       <h2>Несколько фактов о нас</h2>
       <ol class="features__list">
         <li class="features__item">
@@ -85,60 +83,78 @@
         </li>
       </ol>
     </section>
-    <section class="bike-types">
+    <section class="bike-types" id="types">
       <div class="bike-types__inner">
         <h2>Виды велосипедов</h2>
         <ul class="bike-types__list">
           <li class="bike-types__item bike-types__item--road">
-            <a class="bike-types__link" href="#">
+            <a class="bike-types__link bike-types__link--road" href="#">
               <picture>
+                <!-- 1х: 342px; 2x: 684px -->
                 <source type="image/webp" media="(min-width: 1024px)"
                   srcset="img/road-bike-desktop@1x.webp 1x, img/road-bike-desktop@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)"
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" media="(min-width: 768px)"
                   srcset="img/road-bike-tablet@1x.webp 1x, img/road-bike-tablet@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 540px -->
                 <source type="image/webp" srcset="img/road-bike-mobile@1x.webp 1x, img/road-bike-mobile@2x.webp 2x">
+                <!-- 1х: 342px; 2x: 684px -->
                 <source media="(min-width: 1024px)"
                   srcset="img/road-bike-desktop@1x.jpg 1x, img/road-bike-desktop@2x.jpg 2x">
-                <source media="(max-width: 1023px)"
+                <!-- 1х: 270px; 2x: 540px -->
+                <source media="(min-width: 768px)"
                   srcset="img/road-bike-tablet@1x.jpg 1x, img/road-bike-tablet@2x.jpg 2x">
-                <img src="img/road-bike-mobile@1x.jpg" srcset="img/road-bike-mobile@2x.jpg 2x" alt="Дорожный велосипед"
-                  width="342" height="503">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/road-bike-mobile@1x.jpg" loading="lazy" srcset="img/road-bike-mobile@2x.jpg 2x"
+                  alt="Дорожный велосипед" width="342" height="503">
               </picture>
             </a>
             <h3>Дорожный велосипед</h3>
           </li>
           <li class="bike-types__item bike-types__item--mountain">
-            <a class="bike-types__link" href="#">
+            <a class="bike-types__link bike-types__link--mountain" href="#">
               <picture>
+                <!-- 1х: 342px; 2x: 684px -->
                 <source type="image/webp" media="(min-width: 1024px)"
                   srcset="img/mountain-bike-desktop@1x.webp 1x, img/mountain-bike-desktop@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)"
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" media="(min-width: 768px)"
                   srcset="img/mountain-bike-tablet@1x.webp 1x, img/mountain-bike-tablet@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 540px -->
                 <source type="image/webp" srcset="img/road-bike-mobile@1x.webp 1x, img/road-bike-mobile@2x.webp 2x">
+                <!-- 1х: 342px; 2x: 684px -->
                 <source media="(min-width: 1024px)"
                   srcset="img/mountain-bike-desktop@1x.jpg 1x, img/mountain-bike-desktop@2x.jpg 2x">
-                <source media="(max-width: 1023px)"
+                <!-- 1х: 270px; 2x: 540px -->
+                <source media="(min-width: 768px)"
                   srcset="img/mountain-bike-tablet@1x.jpg 1x, img/mountain-bike-tablet@2x.jpg 2x">
-                <img src="img/mountain-bike-mobile@1x.jpg" srcset="img/mountain-bike-mobile@2x.jpg 2x"
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/mountain-bike-mobile@1x.jpg" loading="lazy" srcset="img/mountain-bike-mobile@2x.jpg 2x"
                   alt="Горный велосипед" width="342" height="566">
               </picture>
             </a>
             <h3>Горный велосипед</h3>
           </li>
           <li class="bike-types__item bike-types__item--kids">
-            <a class="bike-types__link" href="#">
+            <a class="bike-types__link bike-types__link--kids" href="#">
               <picture>
+                <!-- 1х: 342px; 2x: 684px -->
                 <source type="image/webp" media="(min-width: 1024px)"
                   srcset="img/kids-bike-desktop@1x.webp 1x, img/kids-bike-desktop@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)"
+                <!-- 1х: 270px; 2x: 540px -->
+                <source type="image/webp" media="(min-width: 768px)"
                   srcset="img/kids-bike-tablet@1x.webp 1x, img/kids-bike-tablet@2x.webp 2x">
+                <!-- 1х: 270px; 2x: 540px -->
                 <source type="image/webp" srcset="img/kids-bike-mobile@1x.webp 1x, img/kids-bike-mobile@2x.webp 2x">
+                <!-- 1х: 342px; 2x: 684px -->
                 <source media="(min-width: 1024px)"
                   srcset="img/kids-bike-desktop@1x.jpg 1x, img/kids-bike-desktop@2x.jpg 2x">
-                <source media="(max-width: 1023px)"
+                <!-- 1х: 270px; 2x: 540px -->
+                <source media="(min-width: 768px)"
                   srcset="img/kids-bike-tablet@1x.jpg 1x, img/kids-bike-tablet@2x.jpg 2x">
-                <img src="img/kids-bike-mobile@1x.jpg" srcset="img/kids-bike-mobile@2x.jpg 2x" alt="Детский велосипед"
-                  width="342" height="513">
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/kids-bike-mobile@1x.jpg" loading="lazy" srcset="img/kids-bike-mobile@2x.jpg 2x"
+                  alt="Детский велосипед" width="342" height="513">
               </picture>
             </a>
             <h3>Детский велосипед</h3>
@@ -146,9 +162,26 @@
         </ul>
       </div>
     </section>
-    <section class="directions">
+    <article class="bike-video" id="video">
+      <div class="bike-video__inner">
+        <h2>Видео про велосипеды</h2>
+        <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+        <div class="bike-video__wrapper">
+          <video>
+
+          </video>
+          <button class="bike-video__play" type="button">
+            <span class="visually-hidden">
+              Проиграть видео
+            </span>
+            <img src="img/play-button.svg" alt="Кнопка проигрывания видео" width="65" height="65">
+          </button>
+        </div>
+      </div>
+    </article>
+    <section class="directions" id="contacts">
       <h2>Как нас найти?</h2>
-      <p>Мы находимся по адресу: Санкт&nbsp;-&nbsp;Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19</p>
+      <p>Мы находимся по адресу: Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19</p>
       <div class="directions__map" tabindex="0"></div>
     </section>
   </main>
@@ -156,22 +189,10 @@
     <ul class="page-footer__contacts">
       <li class="page-footer__item page-footer__item--mail">
         <a class="page-footer__link" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru
-          <svg class="page-footer__icon page-footer__icon--mail" width="26" height="20" viewBox="0 0 26 20" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M24.2273 0H1.77273C0.768182 0 0 0.764706 0 1.76471V18.2353C0 19.2353 0.768182 20 1.77273 20H24.2273C25.2318 20 26 19.2353 26 18.2353V1.76471C26 0.764706 25.2318 0 24.2273 0ZM24.2273 17L19.5591 12.3529C19.2045 12 18.6727 12 18.3182 12.3529C17.9636 12.7059 17.9636 13.2353 18.3182 13.5882L22.9864 18.2353H3.01362L7.68182 13.5882C8.03636 13.2353 8.03636 12.7059 7.68182 12.3529C7.32727 12 6.79547 12 6.44092 12.3529L1.77273 17V5.70585L12.4091 13.7059C12.5864 13.8236 12.7636 13.8823 12.9409 13.8823C13.1182 13.8823 13.2954 13.8236 13.4727 13.7059L24.2273 5.70585V17ZM24.2273 1.76471V3.4706L12.9409 11.8235L1.77273 3.4706V1.76471H24.2273Z"
-              fill="#0AD9C6" />
-          </svg>
         </a>
       </li>
       <li class="page-footer__item page-footer__item--phone">
         <a class="page-footer__link" href="tel:+749978468446">+7 (499) -784-684-46
-          <svg class="page-footer__icon page-footer__icon--phone" width="22" height="24" viewBox="0 0 22 24" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M3.45641 6.62432C3.37185 5.42623 3.63759 4.24606 4.3412 3.29684C4.9512 2.43632 5.74541 1.96636 6.70269 1.69172C7.50898 1.4525 8.03745 1.74561 8.26998 2.64204C8.60217 3.98224 9.07628 5.3225 9.24841 6.73361C9.30277 7.35485 8.90114 8.23322 8.46629 8.6856C7.37614 9.75888 7.60263 10.5399 8.43006 12.1643C8.68675 12.6881 9.09442 13.5934 9.88864 14.7919C10.7161 15.9992 11.1539 16.6472 12.2169 16.0975C13.3977 15.5035 14.2583 15.8855 15.1492 16.8444C15.7531 17.5369 16.4175 18.1318 17.0215 18.8243C17.8942 19.8542 17.8549 20.5641 17.1725 21.2915C15.9434 22.6309 13.9141 23.0736 12.4042 22.1766C11.5707 21.6881 10.7402 21.0487 10.0789 20.303C7.16477 16.9825 5.06297 13.1212 3.79765 8.76321C3.59532 8.02654 3.50171 7.28104 3.45641 6.62432Z"
-              stroke="#0AD9C6" stroke-width="2" stroke-miterlimit="10" />
-          </svg>
         </a>
       </li>
     </ul>

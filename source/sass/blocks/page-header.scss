@@ -6,6 +6,10 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/index-background-desktop@2x.jpg");
+  }
 }
 
 .page-header__inner {
@@ -16,6 +20,7 @@
 }
 
 .page-header__wrapper {
+  height: 1px; //для IE11
   min-height: 763px;
   display: flex;
   justify-content: space-between;
@@ -35,6 +40,7 @@
 
   .page-header__wrapper {
     flex-direction: column;
+    height: auto;
     min-height: 100%;
   }
 }

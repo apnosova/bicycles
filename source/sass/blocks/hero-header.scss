@@ -45,6 +45,10 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-tablet@2x.jpg");
+    }
   }
 
   .hero-header__content {
@@ -80,6 +84,10 @@
     min-height: 390px;
 
     background-image: url("../img/index-background-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
   }
 
   .hero-header__content {

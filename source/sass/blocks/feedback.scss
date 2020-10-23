@@ -1,6 +1,6 @@
 .feedback {
   padding: 47px 0 30px;
-  width: 328px;
+  width: 327px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,6 +15,7 @@
 
 .feedback legend {
   margin-bottom: 20px;
+  width: 331px;
 
   @include font-semibold;
   @include text-size(17px, 1.65);
@@ -25,7 +26,7 @@
 
 .feedback__field input {
   width: 327px;
-  padding: 13px 30px 9px;
+  padding: 12px 30px 10px;
 
   @include font-normal;
   @include text-size(15px, 1.6);
@@ -37,10 +38,13 @@
   border-radius: 6px;
 
   &:hover,
-  &:active,
-  &:focus {
-    background-color: $vivid-cyan;
-    color: $color-black;
+  &:active {
+    background-color: #f6f6f6;
+  }
+
+  &:active:invalid {
+    background-color: #ffa07a;
+    border-radius: 6px;
   }
 }
 
@@ -62,11 +66,9 @@
   border-radius: 6px;
   background-color: $bg-vivid-cyan;
 
-  &:hover,
-  &:focus {
-    background-color: $grayish-blue;
-  }
+  cursor: pointer;
 
+  &:hover,
   &:active {
     background-color: $grayish-blue;
   }
@@ -77,13 +79,14 @@
   .feedback {
     padding-top: 70px;
     padding-bottom: 35px;
-    width: 321px;
+    width: 324px;
     margin: 0 auto;
   }
 
   .feedback legend {
     padding: 0;
     margin-bottom: 30px;
+    width: 324px;
 
     @include font-semibold;
     @include text-size(18px, 1.56);
@@ -110,6 +113,7 @@
   }
 
   .feedback legend {
+    width: auto;
     margin-bottom: 20px;
   }
 

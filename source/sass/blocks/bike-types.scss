@@ -1,5 +1,5 @@
 .bike-types {
-  padding: 150px 0 147px;
+  padding: 150px 0 80px;
 
   background-color: $bg-light-grayish-blue;
 }
@@ -17,7 +17,8 @@
 }
 
 .bike-types h2 {
-  margin: 0;
+  width: 50%;
+  margin: 0 auto;
   margin-bottom: 60px;
   padding-right: 10px;
 
@@ -35,10 +36,6 @@
   letter-spacing: -0.5px;
 }
 
-.bike-types__link {
-  color: $color-black;
-}
-
 
 .bike-types__item img {
   display: block;
@@ -48,72 +45,88 @@
   transition: all 0.5s ease-in-out;
 }
 
-.bike-types__link:hover img {
-  transform: scale(1.05);
-}
-
-.bike-types__link:active img {
-  transform: scale(0.95);
-}
-
 .bike-types__item {
-  position: relative;
   z-index: 1;
 
   margin-bottom: 50px;
   box-sizing: content-box;
-  width: 342px;
+  width: 24.5%;
 
-  border-radius: 10px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 
   &--road {
     padding-left: 60px;
-
-    &::after {
-      z-index: -1;
-
-      @include pseudo-bike-types(23%, 0, 180px, 180px, 27px solid $bg-vivid-cyan, 50%);
-      box-sizing: border-box;
-    }
   }
 
   &--mountain {
     padding: 18px 19px;
     margin-top: 10px;
-
-    &::before {
-      z-index: 1;
-
-      @include pseudo-bike-types(0, 0, 47px, 47px, 8px solid $bg-vivid-cyan, 0);
-      box-sizing: border-box;
-    }
-
-    &::after {
-      z-index: 1;
-
-      @include pseudo-bike-types(85.5%, auto, 47px, 47px, 8px solid $bg-vivid-cyan, 0);
-      right: 0;
-
-      box-sizing: border-box;
-    }
   }
 
   &--kids {
     padding-top: 32px;
     padding-right: 36px;
     margin-top: -41px;
+  }
+}
 
+.bike-types__link {
+  display: block;
+  position: relative;
+  z-index: 1;
+  box-sizing: content-box;
+
+  color: $color-black;
+
+
+  &--road {
     &::after {
-      @include pseudo-bike-types(0, auto, 95px, 95px, 17px solid $bg-vivid-cyan, 50%);
-      right: 0;
+      z-index: -1;
+
+      @include pseudo-bike-types(31%, -60px, 180px, 180px, 27px solid $bg-vivid-cyan, 50%);
 
       box-sizing: border-box;
     }
   }
 
-  &:not(:last-child) {
-    margin-right: 2.1%;
+  &--mountain {
+    &::before {
+      z-index: 1;
+
+      @include pseudo-bike-types(-18px, -19px, 47px, 47px, 8px solid $bg-vivid-cyan, 0);
+
+      box-sizing: border-box;
+    }
+
+    &::after {
+      z-index: 1;
+
+      @include pseudo-bike-types(auto, auto, 47px, 47px, 8px solid $bg-vivid-cyan, 0);
+      bottom: -25px;
+      right: -25px;
+
+      box-sizing: border-box;
+    }
   }
+
+  &--kids {
+    &::after {
+      @include pseudo-bike-types(-32px, auto, 95px, 95px, 17px solid $bg-vivid-cyan, 50%);
+      right: -36px;
+
+      box-sizing: border-box;
+    }
+  }
+}
+
+.bike-types__link:hover img {
+  transform: scale(1.05);
+}
+
+.bike-types__link:active img {
+  transform: scale(0.95);
 }
 
 @media (max-width: $tablet-width) {
@@ -125,11 +138,35 @@
     margin-bottom: 15px;
     width: 270px;
 
+    &:not(:last-child) {
+      margin-right: 5.2%;
+    }
+
+    &:nth-child(2n) {
+      margin-left: 13px;
+    }
+
     &--road {
       padding-left: 37px;
+    }
 
+    &--mountain {
+      padding: 0;
+      margin-top: 0;
+    }
+
+    &--kids {
+      margin-top: 0;
+      padding-right: 0;
+    }
+  }
+
+  .bike-types__link {
+    &--road {
       &::after {
-        top: 56.5%;
+        top: auto;
+        left: -38px;
+        bottom: -27px;
 
         width: 127px;
         height: 127px;
@@ -140,9 +177,6 @@
     }
 
     &--mountain {
-      padding: 0;
-      margin-top: 0;
-
       &::before,
       &::after {
         display: none;
@@ -150,11 +184,8 @@
     }
 
     &--kids {
-      margin-top: 0;
-      padding-right: 0;
-
       &::after {
-        top: 12px;
+        top: -18px;
         right: -25px;
 
         box-sizing: border-box;
@@ -165,15 +196,6 @@
       }
     }
   }
-
-  .bike-types__item:not(:last-child) {
-    margin-right: 5.7%;
-  }
-
-  .bike-types__item:nth-child(2n) {
-    margin-left: 11px;
-  }
-
 
   .bike-types h2 {
     padding-right: 0;
@@ -196,17 +218,31 @@
   .bike-types__item {
     margin-bottom: 40px;
 
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+
+    &:nth-child(2n) {
+      margin-left: 0;
+    }
+
     &--road {
       padding-left: 0;
+    }
 
+    &--kids {
+      padding-top: 0;
+    }
+  }
+
+  .bike-types__link {
+    &--road {
       &::after {
         left: -25px;
       }
     }
 
     &--kids {
-      padding-top: 0;
-
       &::after {
         top: -20px;
         right: -15px;
@@ -214,11 +250,7 @@
     }
   }
 
-  .bike-types__item:not(:last-child) {
-    margin-right: 0;
-  }
-
-  .bike-types__item:nth-child(2n) {
-    margin-left: 0;
+  .bike-types h2 {
+    width: 100%;
   }
 }
