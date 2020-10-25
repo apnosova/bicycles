@@ -30,11 +30,6 @@
   width: 22.37%;
   margin-bottom: 40px;
 
-  @include font-normal;
-  @include text-size(22px, 1.55);
-  text-align: center;
-  letter-spacing: -0.5px;
-
   &:not(:nth-child(4n)) {
     margin-right: 3.5%;
   }
@@ -50,6 +45,15 @@
     text-align: center;
     letter-spacing: -1.27273px;
   }
+}
+
+.features__item p {
+  margin: 0;
+
+  @include font-normal;
+  @include text-size(22px, 1.55);
+  text-align: center;
+  letter-spacing: -0.5px;
 }
 
 @media (max-width: $tablet-width) {
@@ -98,8 +102,6 @@
     min-height: 125px;
     width: 100%;
 
-    @include text-size(18px, 1.89);
-
     &:not(:first-child) {
       padding-top: 45px;
     }
@@ -111,5 +113,9 @@
     &:first-child {
       margin-bottom: 30px;
     }
+  }
+
+  .features__item p {
+    @include text-size(18px, 1.89);
   }
 }
