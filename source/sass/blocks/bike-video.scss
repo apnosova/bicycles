@@ -1,7 +1,4 @@
 .bike-video {
-  padding-top: 120px;
-  min-height: 706px;
-
   background-color: $very-dark-blue;
 }
 
@@ -9,7 +6,10 @@
   position: relative;
 
   width: 929px;
+  min-height: 706px;
   margin: 0 auto;
+  padding-top: 120px;
+  margin-bottom: 98px;
 }
 
 .bike-video h2 {
@@ -26,6 +26,7 @@
 .bike-video p {
   width: 45%;
   margin: 0 auto;
+  margin-bottom: 56px;
 
   text-align: center;
   letter-spacing: -0.005em;
@@ -36,7 +37,7 @@
   position: absolute;
 
   left: 0;
-  top: 160px;
+  bottom: -98px;
 
   width: 929px;
   height: 525px;
@@ -81,13 +82,11 @@
 }
 
 @media (max-width: $tablet-width) {
-  .bike-video {
-    padding-top: 70px;
-    min-height: 413px;
-  }
-
   .bike-video__inner {
     width: 503px;
+    min-height: 413px;
+    padding-top: 70px;
+    margin-bottom: 85px;
   }
 
   .bike-video h2 {
@@ -104,7 +103,7 @@
   }
 
   .bike-video__wrapper {
-    top: 146px;
+    bottom: -85px;
 
     width: 503px;
     height: 282px;
@@ -132,17 +131,15 @@
 }
 
 @media (max-width: $mobile-width) {
-  .bike-video {
-    padding-top: 83px;
-    min-height: 384px;
-  }
-
   .bike-video__inner {
     width: 288px;
+    min-height: 384px;
+    padding-top: 84px;
+    margin-bottom: 49px;
   }
 
   .bike-video__wrapper {
-    top: 187px;
+    bottom: -49px;
 
     width: 288px;
     height: 162px;

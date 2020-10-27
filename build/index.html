@@ -10,32 +10,39 @@
   <link rel="preload" href="fonts/opensans-light.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensans-semibold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensans-bold.woff2" as="font" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.min.css">
+
+  <link rel="preload" href="css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="css/style.min.css">
+  </noscript>
+
 </head>
 
-<body>
+<body class="js-scroll">
   <header class="page-header">
     <div class="page-header__inner">
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#features">О нас</a>
-          </li>
-          <li class=" main-nav__item">
-            <a class="main-nav__link" href="#types">Виды велосипедов</a>
-          </li>
-          <li class=" main-nav__item">
-            <a class="main-nav__link" href="#video">Видео про велосипеды</a>
-          </li>
-          <li class=" main-nav__item">
-            <a class="main-nav__link" href="#contacts">Контакты</a>
-          </li>
-        </ul>
+        <div class="js-scroll">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#features">О нас</a>
+            </li>
+            <li class=" main-nav__item">
+              <a class="main-nav__link" href="#types">Виды велосипедов</a>
+            </li>
+            <li class=" main-nav__item">
+              <a class="main-nav__link" href="#video">Видео про велосипеды</a>
+            </li>
+            <li class=" main-nav__item">
+              <a class="main-nav__link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </div>
       </nav>
       <div class="page-header__wrapper">
         <section class="hero-header">
-          <a class="hero-header__logo" href="index.html">
+          <a class="hero-header__logo">
             <img class="hero-header__logo-img" src="img/logo.svg" alt="Логотип компании Moon" width="70" height="20">
           </a>
           <div class="hero-header__content">
@@ -111,7 +118,7 @@
                 <!-- 1х: 270px; 2x: 540px -->
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/mountain-bike-tablet@1x.webp 1x, img/mountain-bike-tablet@2x.webp 2x">
                 <!-- 1х: 270px; 2x: 540px -->
-                <source type="image/webp" srcset="img/road-bike-mobile@1x.webp 1x, img/road-bike-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="img/mountain-bike-mobile@1x.webp 1x, img/mountain-bike-mobile@2x.webp 2x">
                 <!-- 1х: 342px; 2x: 684px -->
                 <source media="(min-width: 1024px)" srcset="img/mountain-bike-desktop@1x.jpg 1x, img/mountain-bike-desktop@2x.jpg 2x">
                 <!-- 1х: 270px; 2x: 540px -->
@@ -179,8 +186,6 @@
       </li>
     </ul>
   </footer>
-
-  <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>
 

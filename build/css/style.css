@@ -76,6 +76,11 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
+.noscroll {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; }
+
 .page-header {
   position: relative;
   background-color: #0e0e0e;
@@ -123,8 +128,6 @@ img {
   display: none; }
 
 .main-nav {
-  padding-left: 22px;
-  padding-right: 24px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
 
 .main-nav__list {
@@ -140,10 +143,11 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
+.main-nav__item {
+  padding: 21px 26px 9px 22px; }
+
 .main-nav__link {
   display: block;
-  padding-top: 21px;
-  padding-bottom: 9px;
   text-align: center;
   line-height: 2;
   letter-spacing: -0.005em;
@@ -154,12 +158,17 @@ img {
 @media (max-width: 1023px) {
   .main-nav {
     position: relative;
+    z-index: 2;
     border-bottom: none; }
+    .main-nav--opened {
+      overflow-y: auto; }
   .main-nav__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
+  .main-nav__item {
+    padding: 0; }
   .main-nav__toggle {
     position: absolute;
     top: 0;
@@ -214,17 +223,15 @@ img {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 10;
+    z-index: 2;
     padding-bottom: 95px;
     padding-top: 60px;
     width: 100%;
-    min-height: 568px;
+    min-height: 100vh;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-color: #ffffff;
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+    background-color: #ffffff; }
   .main-nav--opened .main-nav__link {
     padding: 15px 60px 17px 16px;
     font-size: 20px;
@@ -290,9 +297,7 @@ img {
       border-top-color: #000000;
       border-right-color: #000000; }
   .main-nav--nojs {
-    padding: 0; }
-  .nav--open {
-    overflow-y: hidden; } }
+    padding: 0; } }
 
 .hero-header {
   width: 393px;
@@ -700,7 +705,7 @@ img {
     border: 8px solid #0ad9c6;
     border-radius: 0;
     bottom: -25px;
-    right: -25px;
+    right: -23px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
   .bike-types__link--kids::after {
@@ -726,12 +731,12 @@ img {
 
 @media (max-width: 1023px) {
   .bike-types {
-    padding: 50px 5% 55px; }
+    padding: 50px 5% 39px; }
   .bike-types__item {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     width: 270px; }
     .bike-types__item:not(:last-child) {
-      margin-right: 5.2%; }
+      margin-right: 5.35%; }
     .bike-types__item:nth-child(2n) {
       margin-left: 13px; }
     .bike-types__item--road {
@@ -741,11 +746,12 @@ img {
       margin-top: 0; }
     .bike-types__item--kids {
       margin-top: 0;
-      padding-right: 0; }
+      padding-right: 0;
+      padding-top: 18px; }
   .bike-types__link--road::after {
     top: auto;
-    left: -38px;
-    bottom: -27px;
+    left: -37px;
+    bottom: -28px;
     width: 127px;
     height: 127px;
     -webkit-box-sizing: border-box;
@@ -754,7 +760,7 @@ img {
   .bike-types__link--mountain::before, .bike-types__link--mountain::after {
     display: none; }
   .bike-types__link--kids::after {
-    top: -18px;
+    top: -19px;
     right: -25px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -769,7 +775,7 @@ img {
 
 @media (max-width: 767px) {
   .bike-types {
-    padding-bottom: 15px; }
+    padding-bottom: 22px; }
   .bike-types__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -778,18 +784,17 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  .bike-types__item {
-    margin-bottom: 40px; }
-    .bike-types__item:not(:last-child) {
-      margin-right: 0; }
-    .bike-types__item:nth-child(2n) {
-      margin-left: 0; }
-    .bike-types__item--road {
-      padding-left: 0; }
-    .bike-types__item--kids {
-      padding-top: 0; }
+  .bike-types__item:not(:last-child) {
+    margin-bottom: 41px;
+    margin-right: 0; }
+  .bike-types__item:nth-child(2n) {
+    margin-left: 0; }
+  .bike-types__item--road {
+    padding-left: 0; }
+  .bike-types__item--kids {
+    padding-top: 0; }
   .bike-types__link--road::after {
-    left: -25px; }
+    left: -24px; }
   .bike-types__link--kids::after {
     top: -20px;
     right: -15px; }
@@ -797,14 +802,15 @@ img {
     width: 100%; } }
 
 .bike-video {
-  padding-top: 120px;
-  min-height: 706px;
   background-color: #131314; }
 
 .bike-video__inner {
   position: relative;
   width: 929px;
-  margin: 0 auto; }
+  min-height: 706px;
+  margin: 0 auto;
+  padding-top: 120px;
+  margin-bottom: 98px; }
 
 .bike-video h2 {
   width: 55%;
@@ -822,6 +828,7 @@ img {
 .bike-video p {
   width: 45%;
   margin: 0 auto;
+  margin-bottom: 56px;
   text-align: center;
   letter-spacing: -0.005em;
   color: rgba(255, 255, 255, 0.7); }
@@ -829,7 +836,7 @@ img {
 .bike-video__wrapper {
   position: absolute;
   left: 0;
-  top: 160px;
+  bottom: -98px;
   width: 929px;
   height: 525px;
   background-color: #131314;
@@ -865,11 +872,11 @@ img {
             transform: scale(0.8); }
 
 @media (max-width: 1023px) {
-  .bike-video {
-    padding-top: 70px;
-    min-height: 413px; }
   .bike-video__inner {
-    width: 503px; }
+    width: 503px;
+    min-height: 413px;
+    padding-top: 70px;
+    margin-bottom: 85px; }
   .bike-video h2 {
     width: 60%;
     margin: 0 auto;
@@ -880,7 +887,7 @@ img {
   .bike-video p {
     width: 90%; }
   .bike-video__wrapper {
-    top: 146px;
+    bottom: -85px;
     width: 503px;
     height: 282px;
     background-color: #131314;
@@ -901,13 +908,13 @@ img {
     left: 40%; } }
 
 @media (max-width: 767px) {
-  .bike-video {
-    padding-top: 83px;
-    min-height: 384px; }
   .bike-video__inner {
-    width: 288px; }
+    width: 288px;
+    min-height: 384px;
+    padding-top: 84px;
+    margin-bottom: 49px; }
   .bike-video__wrapper {
-    top: 187px;
+    bottom: -49px;
     width: 288px;
     height: 162px;
     background-color: #131314;
@@ -933,7 +940,7 @@ img {
     left: 37%; } }
 
 .directions {
-  padding: 249px 72px 0;
+  padding: 151px 72px 0;
   margin: 0 auto; }
 
 .directions h2 {
@@ -960,22 +967,24 @@ img {
   color: rgba(0, 0, 0, 0.7); }
 
 .directions__map {
+  width: 957px;
   height: 530px;
+  margin: 0 auto;
   background-color: #e6e6e6;
-  background-image: url("../img/map-desktop@1x.png");
-  background-size: cover;
+  background-image: url("../img/map-desktop@1x.jpg");
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .directions__map {
-      background-image: url("../img/map-desktop@2x.png"); } }
+      background-image: url("../img/map-desktop@2x.jpg"); } }
 
 .directions__map img {
   display: block; }
 
 @media (max-width: 1023px) {
   .directions {
-    padding: 155px 4.55% 0;
+    padding: 70px 4.55% 0;
     width: 100%; }
   .directions h2 {
     padding-right: 0;
@@ -987,35 +996,38 @@ img {
     margin-bottom: 20px;
     width: 100%; }
   .directions__map {
+    width: 698px;
     height: 545px;
     background-color: #e6e6e6;
-    background-image: url("../img/map-tablet@1x.png");
-    background-size: cover;
+    background-image: url("../img/map-tablet@1x.jpg");
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat; } }
   @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
     .directions__map {
-      background-image: url("../img/map-tablet@2x.png"); } }
+      background-image: url("../img/map-tablet@2x.jpg"); } }
 
 @media (max-width: 767px) {
   .directions {
-    padding-top: 119px; }
+    padding-left: 0;
+    padding-right: 0; }
   .directions h2 {
     width: 80%;
     font-size: 18px;
     line-height: 1.67; }
   .directions p {
-    width: 90%; }
+    width: 80%; }
   .directions__map {
+    width: 100%;
     height: 250px;
     background-color: #e6e6e6;
-    background-image: url("../img/map-mobile@1x.png");
+    background-image: url("../img/map-mobile@1x.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
     .directions__map {
-      background-image: url("../img/map-mobile@2x.png"); } }
+      background-image: url("../img/map-mobile@2x.jpg"); } }
 
 .page-footer {
   width: 558px;
@@ -1072,10 +1084,14 @@ img {
 @media (max-width: 1023px) {
   .page-footer {
     padding-bottom: 52px;
-    padding-top: 18px;
-    width: 72%; }
+    padding-top: 17px;
+    width: 553px; }
   .page-footer__item--phone {
-    padding-right: 10px; } }
+    padding-right: 9px; }
+  .page-footer__item--mail {
+    padding-left: 38px; }
+    .page-footer__item--mail::before {
+      left: -2px; } }
 
 @media (max-width: 767px) {
   .page-footer {
@@ -1099,6 +1115,6 @@ img {
   .page-footer__item--phone {
     padding-right: 15px; }
     .page-footer__item--phone::before {
-      top: -2px; }
+      top: 0; }
   .page-footer__item:not(:last-child) {
     margin-bottom: 19px; } }

@@ -1,5 +1,5 @@
 .directions {
-  padding: 249px 72px 0;
+  padding: 151px 72px 0;
   margin: 0 auto;
 }
 
@@ -26,16 +26,18 @@
 }
 
 .directions__map {
+  width: 957px;
   height: 530px;
+  margin: 0 auto;
 
   background-color: #e6e6e6;
-  background-image: url("../img/map-desktop@1x.png");
-  background-size: cover;
+  background-image: url("../img/map-desktop@1x.jpg");
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/map-desktop@2x.png");
+    background-image: url("../img/map-desktop@2x.jpg");
   }
 }
 
@@ -45,7 +47,7 @@
 
 @media (max-width: $tablet-width) {
   .directions {
-    padding: 155px 4.55% 0;
+    padding: 70px 4.55% 0;
     width: 100%;
   }
 
@@ -63,23 +65,25 @@
   }
 
   .directions__map {
+    width: 698px;
     height: 545px;
 
     background-color: #e6e6e6;
-    background-image: url("../img/map-tablet@1x.png");
-    background-size: cover;
+    background-image: url("../img/map-tablet@1x.jpg");
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/map-tablet@2x.png");
+      background-image: url("../img/map-tablet@2x.jpg");
     }
   }
 }
 
 @media (max-width: $mobile-width) {
   .directions {
-    padding-top: 119px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .directions h2 {
@@ -89,20 +93,21 @@
   }
 
   .directions p {
-    width: 90%;
+    width: 80%;
   }
 
   .directions__map {
+    width: 100%;
     height: 250px;
 
     background-color: #e6e6e6;
-    background-image: url("../img/map-mobile@1x.png");
+    background-image: url("../img/map-mobile@1x.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/map-mobile@2x.png");
+      background-image: url("../img/map-mobile@2x.jpg");
     }
   }
 }

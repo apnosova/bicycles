@@ -54,13 +54,21 @@
 @media (max-width: $tablet-width) {
   .page-footer {
     padding-bottom: 52px;
-    padding-top: 18px;
-    width: 72%;
+    padding-top: 17px;
+    width: 553px;
   }
 
   .page-footer__item {
     &--phone {
-      padding-right: 10px;
+      padding-right: 9px;
+    }
+
+    &--mail {
+      padding-left: 38px;
+
+      &::before {
+        left: -2px;
+      }
     }
   }
 }
@@ -94,7 +102,7 @@
       padding-right: 15px;
 
       &::before {
-        top: -2px;
+        top: 0;
       }
     }
 
