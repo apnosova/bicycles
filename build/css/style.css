@@ -810,7 +810,7 @@ img {
   min-height: 706px;
   margin: 0 auto;
   padding-top: 120px;
-  margin-bottom: 173px; }
+  margin-bottom: 98px; }
 
 .bike-video h2 {
   width: 55%;
@@ -876,7 +876,7 @@ img {
     width: 503px;
     min-height: 413px;
     padding-top: 70px;
-    margin-bottom: 120px; }
+    margin-bottom: 85px; }
   .bike-video h2 {
     width: 60%;
     margin: 0 auto;
@@ -940,7 +940,7 @@ img {
     left: 37%; } }
 
 .directions {
-  padding: 76px 72px 0;
+  padding: 151px 72px 0;
   margin: 0 auto; }
 
 .directions h2 {
@@ -984,7 +984,7 @@ img {
 
 @media (max-width: 1023px) {
   .directions {
-    padding: 35px 4.55% 0;
+    padding: 70px 4.55% 0;
     width: 100%; }
   .directions h2 {
     padding-right: 0;
