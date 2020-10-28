@@ -6,21 +6,16 @@
 
   var mainNav = document.querySelector('.main-nav');
   var navToggle = document.querySelector('.main-nav__toggle');
-  // var noscroll = document.querySelectorAll('js-scroll');
   var navLink = document.querySelectorAll('.main-nav__link');
 
   mainNav.classList.remove('main-nav--nojs');
 
   var addScroll = function () {
-    document.querySelectorAll('.js-scroll').forEach(function (item) {
-      item.classList.add('noscroll');
-    });
+    document.querySelector('body').classList.add('noscroll');
   };
 
   var removeScroll = function () {
-    document.querySelectorAll('.js-scroll').forEach(function (item) {
-      item.classList.remove('noscroll');
-    });
+    document.querySelector('body').classList.remove('noscroll');
   };
 
   navToggle.addEventListener('click', function () {
@@ -99,6 +94,5 @@
 
     phoneInput.addEventListener('input', mask, false);
     phoneInput.addEventListener('focus', mask, false);
-    phoneInput.addEventListener('blur', mask, false);
   });
 })();

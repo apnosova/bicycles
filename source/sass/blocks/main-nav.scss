@@ -34,18 +34,25 @@
 
 @media (max-width: $tablet-width) {
   .main-nav {
-    position: relative;
-    z-index: 2;
-
     border-bottom: none;
 
     &--opened {
-      overflow-y: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 20;
+
+      width: 100%;
+      height: 100%;
+
+      background-color: $white;
+
+      overflow-y: scroll;
     }
   }
 
   .main-nav__list {
-    flex-direction: column;
+    display: block;
   }
 
   .main-nav__item {
@@ -92,6 +99,7 @@
   }
 
   .main-nav--opened .main-nav__toggle {
+    position: fixed;
     top: 0;
     right: 0;
     z-index: 12;
@@ -133,13 +141,11 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 2;
+    z-index: 10;
 
-    padding-bottom: 95px;
-    padding-top: 60px;
+    padding-bottom: 138px;
+    padding-top: 100px;
     width: 100%;
-    min-height: 100vh;
-    justify-content: center;
 
     background-color: $white;
   }
